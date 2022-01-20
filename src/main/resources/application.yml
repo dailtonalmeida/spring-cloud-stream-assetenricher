@@ -1,0 +1,15 @@
+server:
+  port:
+    8082
+
+spring:
+  cloud:
+    function:
+      definition: enrichAsset
+    stream:
+      bindings:
+        enrichAsset-in-0:
+          destination: raw-asset
+        enrichAsset-out-0:
+          destination: enriched-asset
+          
